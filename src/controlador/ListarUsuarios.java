@@ -10,13 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.Usuario;
+import modelo.UsuarioModelo;
 
 public class ListarUsuarios extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		String nombre=request.getParameter("nombre");
 		
-		ArrayList<Usuario> usuarios=new ArrayList<>();
+		UsuarioModelo usuarioModelo=new UsuarioModelo();
+		
+		ArrayList<Usuario> usuarios=usuarioModelo.selectAll();
 		Usuario u=new Usuario();
 		u.setNombre(nombre);
 		u.setEdad(10);
