@@ -22,6 +22,17 @@
         <url-pattern>/ListarUsuarios</url-pattern>
     </servlet-mapping>
     
+    
+    <servlet>
+        <servlet-name>Logear</servlet-name>
+        <servlet-class>controlador.Logear</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Logear</servlet-name>
+        <url-pattern>/Logear</url-pattern>
+    </servlet-mapping>
+    
 
 <!-- Fin de la publicacion de servlets -->
 
